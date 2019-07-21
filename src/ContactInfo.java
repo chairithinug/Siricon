@@ -26,10 +26,10 @@ public class ContactInfo {
 	@SuppressWarnings("unchecked")
 	public JSONObject toJSON() {
 		JSONObject object = new JSONObject();
-		object.put("currentAddress", this.getCurrentAddress().toString());
+		object.put("currentAddress", this.getCurrentAddress().toJSON());
 		object.put("currentMobileNo", this.getCurrentMobileNo());
-		object.put("workAddress", this.getWorkAddress().toString());
-		object.put("emergencyContact", this.getEmergencyContact().toString());
+		object.put("workAddress", this.getWorkAddress().toJSON());
+		object.put("emergencyContact", this.getEmergencyContact().toJSON());
 		return object;
 	}
 	
