@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 import java.util.Comparator;
 
+/**
+ * @author Anapat Chairithinugull
+ *
+ */
 public class Folder {
 	private Patient owner;
 	private ArrayList<Document> history;

@@ -1,5 +1,9 @@
 import java.util.Calendar;
 
+/**
+ * @author Anapat Chairithinugull
+ *
+ */
 public class Document {
 	private int ticket; // ticket for this service
 	private Calendar date; // date of receiving the service
