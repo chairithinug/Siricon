@@ -9,15 +9,15 @@ import org.json.simple.JSONObject;
 public class PersonalInfo {
 	private Gender gender;
 	private int age;
-	private float weight;
-	private float height;
+	private double weight;
+	private double height;
 	private Calendar birthDate;
 
 	public PersonalInfo(
 			Gender gender,
 			int age,
-			float weight,
-			float height,
+			double weight,
+			double height,
 			Calendar birthDate)
 	{
 		this.setGender(gender);
@@ -51,11 +51,11 @@ public class PersonalInfo {
 		return this.age;
 	}
 
-	public float getWeight() {
+	public double getWeight() {
 		return this.weight;
 	}
 
-	public float getHeight() {
+	public double getHeight() {
 		return this.height;
 	}
 
@@ -71,11 +71,11 @@ public class PersonalInfo {
 		this.age = age;
 	}
 
-	public void setWeight(float weight) {
+	public void setWeight(double weight) {
 		this.weight = weight;
 	}
 
-	public void setHeight(float height) {
+	public void setHeight(double height) {
 		this.height = height;
 	}
 

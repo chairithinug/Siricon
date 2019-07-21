@@ -22,7 +22,7 @@ public class MorePersonalInfo {
 		this.setNationality(nationality);
 		this.setMaritalStatus(maritalStatus);
 		this.setOccupation(occupation);
-		this.setOccupation(occupation);
+		this.setReligion(religion);
 	}
 	
 	@SuppressWarnings("unchecked")

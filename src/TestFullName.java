@@ -1,7 +1,7 @@
 import static org.junit.Assert.fail;
 
 import org.junit.Rule;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.rules.Timeout;
 
 class TestFullName {
