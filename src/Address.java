@@ -43,6 +43,7 @@ public class Address {
 		return object;
 	}
 	
+	@Override
 	public String toString() {
 		return this.toJSON().toString();
 	}

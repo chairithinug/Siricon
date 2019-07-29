@@ -14,7 +14,6 @@ public class Folder {
 		this.history = new ArrayList<Document>();
 	}
 	
-
 	public String whoseFolder() {
 		return this.owner.toString(); // firstName lastName
 	}
@@ -43,7 +42,7 @@ public class Folder {
 		history.sort(new Comparator<Document>() {
 			@Override
 			public int compare(Document doc1, Document doc2) {
-				return doc1.getDate().compareTo(doc2.getDate());
+				return doc1.getDateTime().compareTo(doc2.getDateTime());
 			}
 		});
 	}

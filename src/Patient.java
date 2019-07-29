@@ -50,6 +50,7 @@ public class Patient {
 		return object;
 	}
 
+	@Override
 	public String toString() {
 		JSONObject object = this.toJSON();
 		return object.toString();

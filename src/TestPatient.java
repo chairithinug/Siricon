@@ -1,7 +1,6 @@
 import static org.junit.Assert.fail;
 
-import java.util.Calendar;
-
+import java.time.LocalDate;
 import org.json.simple.JSONObject;
 import org.junit.Rule;
 import org.junit.Test;
@@ -9,7 +8,7 @@ import org.junit.rules.Timeout;
 
 public class TestPatient {
 	FullName fullName = new FullName(Title.Mr, "A", "Ant");
-	Calendar now = Calendar.getInstance();
+	LocalDate now = LocalDate.now();
 	PersonalInfo personalInfo = new PersonalInfo(Gender.Male, 25, 62.0, 180.0, now);
 	MorePersonalInfo morePersonalInfo = new MorePersonalInfo(
 			"Asian",

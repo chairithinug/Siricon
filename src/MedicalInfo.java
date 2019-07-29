@@ -32,6 +32,7 @@ public class MedicalInfo {
 		return object;
 	}
 
+	@Override
 	public String toString() {
 		JSONObject object = this.toJSON();
 		return object.toString();

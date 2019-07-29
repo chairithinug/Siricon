@@ -1,7 +1,6 @@
 import static org.junit.Assert.*;
 
-import java.util.Calendar;
-import java.util.Date;
+import java.time.LocalDate;
 
 import org.json.simple.JSONObject;
 import org.junit.Rule;
@@ -13,7 +12,7 @@ public class TestPersonalInfo {
 	@Rule
 	public Timeout timeout = Timeout.seconds(10);
 
-	Calendar now = Calendar.getInstance(); // FIXME
+	LocalDate now = LocalDate.now(); // FIXME
 
 	@Test
 	public void testConstructor() {

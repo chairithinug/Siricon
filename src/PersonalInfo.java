@@ -1,4 +1,4 @@
-import java.util.Calendar;
+import java.time.LocalDate;
 
 import org.json.simple.JSONObject;
 
@@ -11,14 +11,14 @@ public class PersonalInfo {
 	private int age;
 	private double weight;
 	private double height;
-	private Calendar birthDate;
+	private LocalDate birthDate;
 
 	public PersonalInfo(
 			Gender gender,
 			int age,
 			double weight,
 			double height,
-			Calendar birthDate)
+			LocalDate birthDate)
 	{
 		this.setGender(gender);
 		this.setAge(age);
@@ -38,6 +38,7 @@ public class PersonalInfo {
 		return object;
 	}
 	
+	@Override
 	public String toString() {
 		JSONObject object = this.toJSON();
 		return object.toString();
@@ -59,7 +60,7 @@ public class PersonalInfo {
 		return this.height;
 	}
 
-	public Calendar getBirthDate() {
+	public LocalDate getBirthDate() {
 		return this.birthDate;
 	}
 
@@ -79,7 +80,7 @@ public class PersonalInfo {
 		this.height = height;
 	}
 
-	public void setBirthDate(Calendar birthDate) {
+	public void setBirthDate(LocalDate birthDate) {
 		this.birthDate = birthDate;
 	}
 }

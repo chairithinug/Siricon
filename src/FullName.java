@@ -38,6 +38,7 @@ public class FullName {
 		this.lastName = lastName;
 	}
 
+	@Override
 	public String toString() {
 		return String.format("%s. %s %s", this.getTitle(), this.getFirstName(), this.getLastName());
 	}
