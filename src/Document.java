@@ -1,4 +1,5 @@
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -11,9 +12,21 @@ import org.json.simple.JSONObject;
  */
 public class Document {
 	private int ticket; // ticket for this service
-	private LocalDateTime dateTime; // date of receiving the service
+	private LocalDate date; // date of receiving the service
+	private LocalTime time; // time of receiving the service
 	private String author; // whoever write this document
-	private String documentID;
+	private String documentID; // FIXME
+	
+	// documentID == hashCode of Patient? do something with document
+	// UUID.randomUUID().toString(); though not truly unique*/ hard to read
+	public Document(String author, int ticket, String documentID) {
+		this.setTicket(ticket);
+		this.setDate(LocalDate.now());
+		this.setTime(LocalTime.now());
+		this.setAuthor(author);
+		this.setDocumentID(documentID);
+//		this.setDocumentID(UUID.randomUUID().toString());
+	}
 	
 	public int getTicket() {
 		return this.ticket;
@@ -23,12 +36,20 @@ public class Document {
 		this.ticket = ticket;
 	}
 
-	public LocalDateTime getDateTime() {
-		return this.dateTime;
+	public LocalDate getDate() {
+		return this.date;
 	}
 
-	public void setDateTime(LocalDateTime dateTime) {
-		this.dateTime = dateTime;
+	public void setDate(LocalDate date) {
+		this.date = date;
+	}
+	
+	public LocalTime getTime() {
+		return time;
+	}
+	
+	public void setTime(LocalTime time) {
+		this.time = time;
 	}
 
 	public String getAuthor() {
@@ -52,7 +73,8 @@ public class Document {
 class Prescription extends Document {
 	private ArrayList<String> list;
 	
-	public Prescription() {
+	public Prescription(String author, int ticket, String documentID) {
+		super(author, ticket, documentID);
 		this.list = new ArrayList<String>();
 	}
 
@@ -107,7 +129,8 @@ class Prescription extends Document {
 		object.put("size", this.getList());
 		// COMMON DATA
 		object.put("author", this.getAuthor());
-		object.put("dateTime", this.getDateTime());
+		object.put("date", this.getDate().toString());
+		object.put("time", this.getTime().toString());
 		object.put("ticket", this.getTicket());
 		object.put("documentID", this.getDocumentID());
 		return object;

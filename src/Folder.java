@@ -42,7 +42,11 @@ public class Folder {
 		history.sort(new Comparator<Document>() {
 			@Override
 			public int compare(Document doc1, Document doc2) {
-				return doc1.getDateTime().compareTo(doc2.getDateTime());
+				int res = doc1.getDate().compareTo(doc2.getDate());
+				if(res == 0) {
+					return doc1.getTime().compareTo(doc2.getTime());
+				}
+				return res;
 			}
 		});
 	}

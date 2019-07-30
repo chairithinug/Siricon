@@ -1,6 +1,7 @@
 import static org.junit.Assert.fail;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -16,9 +17,9 @@ public class TestDocument_Prescription extends TestName {
 
 	@Test
 	public void testPresciption() {
-		System.out.println(testName.getMethodName());
+		printTest();
 		try {
-			Prescription p = new Prescription();
+			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
 		} catch (Exception e) {
 			fail("Unexpectedly crash.");
 		}
@@ -26,9 +27,9 @@ public class TestDocument_Prescription extends TestName {
 
 	@Test
 	public void testAddMed() {
-		System.out.println(testName.getMethodName());
+		printTest();
 		try {
-			Prescription p = new Prescription();
+			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
 			p.addMed("Paracetamol");
 		} catch (Exception e) {
 			fail("Unexpectedly crash.");
@@ -37,9 +38,9 @@ public class TestDocument_Prescription extends TestName {
 
 	@Test
 	public void testAddMeds() {
-		System.out.println(testName.getMethodName());
+		printTest();
 		try {
-			Prescription p = new Prescription();
+			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
 			p.addMeds(new ArrayList<String>() {
 				{
 					add("Paracetamol");
@@ -53,9 +54,9 @@ public class TestDocument_Prescription extends TestName {
 
 	@Test
 	public void testGetList() {
-		System.out.println(testName.getMethodName());
+		printTest();
 		try {
-			Prescription p = new Prescription();
+			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
 			p.addMed("Paracetamol");
 			p.addMeds(new ArrayList<String>() {
 				{
@@ -72,9 +73,9 @@ public class TestDocument_Prescription extends TestName {
 
 	@Test
 	public void testClearList() {
-		System.out.println(testName.getMethodName());
+		printTest();
 		try {
-			Prescription p = new Prescription();
+			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
 			p.addMed("Paracetamol");
 			p.addMeds(new ArrayList<String>() {
 				{
@@ -91,9 +92,9 @@ public class TestDocument_Prescription extends TestName {
 
 	@Test
 	public void testRemoveMed() {
-		System.out.println(testName.getMethodName());
+		printTest();
 		try {
-			Prescription p = new Prescription();
+			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
 			p.addMed("Paracetamol");
 			p.addMeds(new ArrayList<String>() {
 				{
@@ -110,9 +111,9 @@ public class TestDocument_Prescription extends TestName {
 
 	@Test
 	public void testRemoveMeds() {
-		System.out.println(testName.getMethodName());
+		printTest();
 		try {
-			Prescription p = new Prescription();
+			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
 			p.addMed("Paracetamol");
 			p.addMeds(new ArrayList<String>() {
 				{
@@ -134,31 +135,113 @@ public class TestDocument_Prescription extends TestName {
 
 	@Test
 	public void testCountMeds() {
-		System.out.println(testName.getMethodName());
+		printTest();
+		try {
+			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
+			p.addMed("Paracetamol");
+			p.addMeds(new ArrayList<String>() {
+				{
+					add("Chlorpheniramine");
+					add("Aspirin");
+				}
+			});
+			System.out.println(p.countMeds());
+		} catch (Exception e) {
+			fail("Unexpectedly crash.");
+		}
 	}
 
 	@Test
 	public void testFindMed() {
-		System.out.println(testName.getMethodName());
+		printTest();
+		try {
+			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
+			p.addMed("Paracetamol");
+			p.addMeds(new ArrayList<String>() {
+				{
+					add("Chlorpheniramine");
+					add("Aspirin");
+				}
+			});
+			System.out.println(p.findMed("Paracetamol"));
+		} catch (Exception e) {
+			fail("Unexpectedly crash.");
+		}
 	}
 
 	@Test
 	public void testGetMed() {
-		System.out.println(testName.getMethodName());
+		printTest();
+		try {
+			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
+			p.addMed("Paracetamol");
+			p.addMeds(new ArrayList<String>() {
+				{
+					add("Chlorpheniramine");
+					add("Aspirin");
+				}
+			});
+			System.out.println(p.getMed(2));
+		} catch (Exception e) {
+			fail("Unexpectedly crash.");
+		}
 	}
 
 	@Test
 	public void testDuplicateList() {
-		System.out.println(testName.getMethodName());
+		printTest();
+		try {
+			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
+			p.addMed("Paracetamol");
+			p.addMeds(new ArrayList<String>() {
+				{
+					add("Chlorpheniramine");
+					add("Aspirin");
+				}
+			});
+			System.out.println(p.duplicateList().toString());
+		} catch (Exception e) {
+			fail("Unexpectedly crash.");
+		}
 	}
 
 	@Test
 	public void testToJSON() {
-		System.out.println(testName.getMethodName());
+		printTest();
+		try {
+			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
+			p.addMed("Paracetamol");
+			p.addMeds(new ArrayList<String>() {
+				{
+					add("Chlorpheniramine");
+					add("Aspirin");
+				}
+			});
+			p.toJSON();
+		} catch (Exception e) {
+			fail("Unexpectedly crash.");
+		}
 	}
 
 	@Test
 	public void testToString() {
-		System.out.println(testName.getMethodName());
+		printTest();
+		try {
+			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
+			p.addMed("Paracetamol");
+			p.addMeds(new ArrayList<String>() {
+				{
+					add("Chlorpheniramine");
+					add("Aspirin");
+				}
+			});
+			System.out.println(p.toString());
+		} catch (Exception e) {
+			fail("Unexpectedly crash.");
+		}
+	}
+	
+	public void printTest() {
+		System.out.print(testName.getMethodName() + ": ");
 	}
 }
