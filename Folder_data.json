@@ -1,0 +1,79 @@
+{
+    "list": [
+        [
+            {
+                "author": "Z Zebra",
+                "date": "2019-07-30",
+                "documentID": "6a6c50e0-eeae-4c6d-92b6-390ed5a8f2c2",
+                "list": [
+                    [
+                        "Paracetamol",
+                        "Aspirin"
+                    ]
+                ],
+                "size": 2,
+                "ticket": 1,
+                "time": "12:13:52.760"
+            }
+        ]
+    ],
+    "patient": {
+        "contactInfo": {
+            "currentAddress": {
+                "country": "thailand",
+                "district": "bangbon",
+                "number": "123",
+                "postalCode": "10150",
+                "province": "bangkok",
+                "state": "",
+                "street": "bangbon 5",
+                "subDistrict": "bangbon"
+            },
+            "currentMobileNo": "0898765432",
+            "emergencyContact": {
+                "fullName": "Ms. B Bird",
+                "mobileNo": "0812345678",
+                "relationship": "Friend-zoned"
+            },
+            "workAddress": {
+                "country": "thailand",
+                "district": "Phra Nakhon",
+                "number": "88",
+                "postalCode": "10200",
+                "province": "bangkok",
+                "state": "",
+                "street": "Tri Phet",
+                "subDistrict": "Wang Burapha Phirom"
+            }
+        },
+        "fullName": "Mr. A Ant",
+        "medicalInfo": {
+            "bloodRH": "Minus",
+            "bloodType": "A",
+            "drugsAllergy": [
+                "PeanutButter",
+                "Jello"
+            ],
+            "isDrugAllergic": "Yes"
+        },
+        "medicalInsurance": "Corporation",
+        "medicalProviders": [
+            "Thai Insurance",
+            "AIA"
+        ],
+        "morePersonalInfo": {
+            "ethnicity": "Asian",
+            "maritalStatus": "Single",
+            "nationality": "Thai",
+            "occupation": "Student",
+            "religion": "Buddhism"
+        },
+        "personalInfo": {
+            "age": 25,
+            "birthdate": "2019-07-30",
+            "gender": "Male",
+            "height": 180.0,
+            "weight": 62.0
+        }
+    }
+}

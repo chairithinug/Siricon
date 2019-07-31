@@ -1,3 +1,4 @@
+package com.main;
 import java.time.LocalDate;
 
 import org.json.simple.JSONObject;
@@ -7,6 +8,10 @@ import org.json.simple.JSONObject;
  *
  */
 public class PersonalInfo {
+	public static enum Gender {
+		Male, Female, Other
+	}
+	
 	private Gender gender;
 	private int age;
 	private double weight;

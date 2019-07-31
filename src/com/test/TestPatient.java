@@ -1,3 +1,4 @@
+package com.test;
 import static org.junit.Assert.fail;
 
 import java.time.LocalDate;
@@ -6,7 +7,15 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
 
+import com.main.*;
+import com.main.FullName.Title;
+import com.main.MedicalInfo.*;
+import com.main.MorePersonalInfo.*;
+import com.main.Patient.MedicalInsurance;
+import com.main.PersonalInfo.Gender;
+
 public class TestPatient {
+	
 	FullName fullName = new FullName(Title.Mr, "A", "Ant");
 	LocalDate now = LocalDate.now();
 	PersonalInfo personalInfo = new PersonalInfo(Gender.Male, 25, 62.0, 180.0, now);

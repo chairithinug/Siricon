@@ -1,9 +1,14 @@
+package com.main;
 
 /**
  * @author Anapat Chairithinugull
  *
  */
 public class FullName {
+	public static enum Title {
+		Mr, Mrs, Miss, Ms, Other
+	}
+	
 	private Title title;
 	private String firstName;
 	private String lastName;

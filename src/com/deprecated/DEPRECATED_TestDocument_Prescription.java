@@ -1,3 +1,4 @@
+package com.deprecated;
 import static org.junit.Assert.fail;
 
 import java.util.ArrayList;
@@ -8,7 +9,9 @@ import org.junit.Test;
 import org.junit.rules.TestName;
 import org.junit.rules.Timeout;
 
-public class TestDocument_Prescription extends TestName {
+import com.main.DEPRECATED_Order;
+
+public class DEPRECATED_TestDocument_Prescription extends TestName {
 
 	@Rule
 	public Timeout timeout = Timeout.seconds(10);
@@ -19,7 +22,7 @@ public class TestDocument_Prescription extends TestName {
 	public void testPresciption() {
 		printTest();
 		try {
-			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
+			DEPRECATED_Order p = new DEPRECATED_Order("Z Zebra", 1, UUID.randomUUID().toString());
 		} catch (Exception e) {
 			fail("Unexpectedly crash.");
 		}
@@ -29,7 +32,7 @@ public class TestDocument_Prescription extends TestName {
 	public void testAddMed() {
 		printTest();
 		try {
-			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
+			DEPRECATED_Order p = new DEPRECATED_Order("Z Zebra", 1, UUID.randomUUID().toString());
 			p.addMed("Paracetamol");
 		} catch (Exception e) {
 			fail("Unexpectedly crash.");
@@ -40,7 +43,7 @@ public class TestDocument_Prescription extends TestName {
 	public void testAddMeds() {
 		printTest();
 		try {
-			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
+			DEPRECATED_Order p = new DEPRECATED_Order("Z Zebra", 1, UUID.randomUUID().toString());
 			p.addMeds(new ArrayList<String>() {
 				{
 					add("Paracetamol");
@@ -56,7 +59,7 @@ public class TestDocument_Prescription extends TestName {
 	public void testGetList() {
 		printTest();
 		try {
-			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
+			DEPRECATED_Order p = new DEPRECATED_Order("Z Zebra", 1, UUID.randomUUID().toString());
 			p.addMed("Paracetamol");
 			p.addMeds(new ArrayList<String>() {
 				{
@@ -75,7 +78,7 @@ public class TestDocument_Prescription extends TestName {
 	public void testClearList() {
 		printTest();
 		try {
-			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
+			DEPRECATED_Order p = new DEPRECATED_Order("Z Zebra", 1, UUID.randomUUID().toString());
 			p.addMed("Paracetamol");
 			p.addMeds(new ArrayList<String>() {
 				{
@@ -94,7 +97,7 @@ public class TestDocument_Prescription extends TestName {
 	public void testRemoveMed() {
 		printTest();
 		try {
-			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
+			DEPRECATED_Order p = new DEPRECATED_Order("Z Zebra", 1, UUID.randomUUID().toString());
 			p.addMed("Paracetamol");
 			p.addMeds(new ArrayList<String>() {
 				{
@@ -113,7 +116,7 @@ public class TestDocument_Prescription extends TestName {
 	public void testRemoveMeds() {
 		printTest();
 		try {
-			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
+			DEPRECATED_Order p = new DEPRECATED_Order("Z Zebra", 1, UUID.randomUUID().toString());
 			p.addMed("Paracetamol");
 			p.addMeds(new ArrayList<String>() {
 				{
@@ -137,7 +140,7 @@ public class TestDocument_Prescription extends TestName {
 	public void testCountMeds() {
 		printTest();
 		try {
-			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
+			DEPRECATED_Order p = new DEPRECATED_Order("Z Zebra", 1, UUID.randomUUID().toString());
 			p.addMed("Paracetamol");
 			p.addMeds(new ArrayList<String>() {
 				{
@@ -155,7 +158,7 @@ public class TestDocument_Prescription extends TestName {
 	public void testFindMed() {
 		printTest();
 		try {
-			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
+			DEPRECATED_Order p = new DEPRECATED_Order("Z Zebra", 1, UUID.randomUUID().toString());
 			p.addMed("Paracetamol");
 			p.addMeds(new ArrayList<String>() {
 				{
@@ -173,7 +176,7 @@ public class TestDocument_Prescription extends TestName {
 	public void testGetMed() {
 		printTest();
 		try {
-			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
+			DEPRECATED_Order p = new DEPRECATED_Order("Z Zebra", 1, UUID.randomUUID().toString());
 			p.addMed("Paracetamol");
 			p.addMeds(new ArrayList<String>() {
 				{
@@ -191,7 +194,7 @@ public class TestDocument_Prescription extends TestName {
 	public void testDuplicateList() {
 		printTest();
 		try {
-			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
+			DEPRECATED_Order p = new DEPRECATED_Order("Z Zebra", 1, UUID.randomUUID().toString());
 			p.addMed("Paracetamol");
 			p.addMeds(new ArrayList<String>() {
 				{
@@ -209,7 +212,7 @@ public class TestDocument_Prescription extends TestName {
 	public void testToJSON() {
 		printTest();
 		try {
-			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
+			DEPRECATED_Order p = new DEPRECATED_Order("Z Zebra", 1, UUID.randomUUID().toString());
 			p.addMed("Paracetamol");
 			p.addMeds(new ArrayList<String>() {
 				{
@@ -227,7 +230,7 @@ public class TestDocument_Prescription extends TestName {
 	public void testToString() {
 		printTest();
 		try {
-			Prescription p = new Prescription("Z Zebra", 1, UUID.randomUUID().toString());
+			DEPRECATED_Order p = new DEPRECATED_Order("Z Zebra", 1, UUID.randomUUID().toString());
 			p.addMed("Paracetamol");
 			p.addMeds(new ArrayList<String>() {
 				{

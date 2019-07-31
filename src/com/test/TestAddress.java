@@ -1,9 +1,12 @@
+package com.test;
 import static org.junit.Assert.fail;
 
 import org.json.simple.JSONObject;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
+
+import com.main.Address;
 
 public class TestAddress {
 

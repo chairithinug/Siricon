@@ -1,3 +1,4 @@
+package com.main;
 import org.json.simple.JSONObject;
 
 /**
@@ -5,6 +6,14 @@ import org.json.simple.JSONObject;
  *
  */
 public class MorePersonalInfo {
+	public static enum MaritalStatus {
+		Married, Widowed, Divorced, Separated, Single, Other
+	}
+
+	public static enum Religion {
+		Buddhism, Christianity, Islam, Other
+	}
+	
 	private String ethnicity;
 	private String nationality;
 	private MaritalStatus maritalStatus;

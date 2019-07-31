@@ -1,3 +1,4 @@
+package com.main;
 import java.util.Arrays;
 
 import org.json.simple.JSONArray;
@@ -8,6 +9,10 @@ import org.json.simple.JSONObject;
  *
  */
 public class Patient {
+	public static enum MedicalInsurance {
+		Government, Corporation, Other
+	}
+	
 	private FullName fullName;
 	private PersonalInfo personalInfo;
 	private MorePersonalInfo morePersonalInfo;

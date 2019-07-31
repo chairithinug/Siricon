@@ -1,3 +1,4 @@
+package com.deprecated;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -6,26 +7,30 @@ import java.util.Arrays;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+import main.DocumentType;
+
 /**
  * @author Anapat Chairithinugull
  *
  */
-public class Document {
+public class DEPRECATED_Document {
 	private int ticket; // ticket for this service
 	private LocalDate date; // date of receiving the service
 	private LocalTime time; // time of receiving the service
 	private String author; // whoever write this document
 	private String documentID; // FIXME
+	private DocumentType documentType;
 	
 	// documentID == hashCode of Patient? do something with document
 	// UUID.randomUUID().toString(); though not truly unique*/ hard to read
-	public Document(String author, int ticket, String documentID) {
+	public DEPRECATED_Document(String author, int ticket, String documentID, DocumentType documentType) {
 		this.setTicket(ticket);
 		this.setDate(LocalDate.now());
 		this.setTime(LocalTime.now());
 		this.setAuthor(author);
 		this.setDocumentID(documentID);
 //		this.setDocumentID(UUID.randomUUID().toString());
+		this.setDocumentType(documentType);
 	}
 	
 	public int getTicket() {
@@ -67,14 +72,22 @@ public class Document {
 	public void setDocumentID(String documentID) {
 		this.documentID = documentID;
 	}
+	
+	public DocumentType getDocumentType() {
+		return documentType;
+	}
+	
+	public void setDocumentType(DocumentType documentType) {
+		this.documentType = documentType;
+	}
 }
 
 // FIXME MED NAME CASE SENSITIVE?
-class Prescription extends Document {
+class Prescription extends DEPRECATED_Document {
 	private ArrayList<String> list;
 	
 	public Prescription(String author, int ticket, String documentID) {
-		super(author, ticket, documentID);
+		super(author, ticket, documentID, com.deprecated.Prescription);
 		this.list = new ArrayList<String>();
 	}
 
@@ -126,7 +139,7 @@ class Prescription extends Document {
 		JSONArray jsonArray = new JSONArray();
 		jsonArray.addAll(Arrays.asList(this.getList()));
 		object.put("list", jsonArray);
-		object.put("size", this.getList());
+		object.put("size", this.countMeds());
 		// COMMON DATA
 		object.put("author", this.getAuthor());
 		object.put("date", this.getDate().toString());

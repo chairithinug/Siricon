@@ -1,3 +1,4 @@
+package com.main;
 import java.util.Arrays;
 
 import org.json.simple.JSONArray;
@@ -8,6 +9,18 @@ import org.json.simple.JSONObject;
  *
  */
 public class MedicalInfo {
+	public static enum BloodType {
+		A, AB, B, O, Unknown
+	}
+
+	public static enum BloodRH {
+		Plus, Minus, Unknown
+	}
+	
+	public static enum IsDrugAllergic {
+		Yes, No, Unknown
+	}
+	
 	private BloodType bloodType;
 	private BloodRH bloodRH;
 	private IsDrugAllergic isDrugAllergic;
